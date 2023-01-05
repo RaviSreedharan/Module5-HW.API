@@ -25,8 +25,7 @@ class MCSimulation:
     simulated_return : pandas.DataFrame
         Simulated data from Monte Carlo
     confidence_interval : pandas.Series
-        the 95% confidence intervals for simulated final cumulative returns
-        
+        the 95% confidence intervals for simulated final cumulative return
     """
     
     def __init__(self, portfolio_data, weights="", num_simulation=1000, num_trading_days=252):
@@ -75,7 +74,6 @@ class MCSimulation:
     def calc_cumulative_return(self):
         """
         Calculates the cumulative return of a stock over time using a Monte Carlo simulation (Brownian motion with drift).
-
         """
         
         # Get closing prices of each stock
@@ -127,7 +125,6 @@ class MCSimulation:
     def plot_simulation(self):
         """
         Visualizes the simulated stock trajectories using calc_cumulative_return method.
-
         """ 
         
         # Check to make sure that simulation has run previously. 
@@ -141,7 +138,6 @@ class MCSimulation:
     def plot_distribution(self):
         """
         Visualizes the distribution of cumulative returns simulated using calc_cumulative_return method.
-
         """
         
         # Check to make sure that simulation has run previously. 
@@ -159,7 +155,6 @@ class MCSimulation:
     def summarize_cumulative_return(self):
         """
         Calculate final summary statistics for Monte Carlo simulated stock data.
-        
         """
         
         # Check to make sure that simulation has run previously. 
